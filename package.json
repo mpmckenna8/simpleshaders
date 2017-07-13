@@ -1,0 +1,34 @@
+{
+"name": "simpleshaders",
+  "version": "1.0.0",
+  "description": "Way to do shaders and 3js easy like.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "budo index.js:bundle.js --live",
+    "build": "browserify index.js | uglifyjs -cm > bundle.js"
+  },
+    "browserify": {
+        "transform":  "glslify"
+       },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mpmckenna8/simpleshaders.git"
+  },
+  "keywords": [
+    "glsl",
+    "shaders",
+    "webGL",
+    "threejs"
+  ],
+  "author": "mpmckenna8",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mpmckenna8/simpleshaders/issues"
+  },
+  "homepage": "https://github.com/mpmckenna8/simpleshaders#readme",
+  "dependencies": {
+    "glslify": "^6.1.0",
+    "three": "^0.86.0"
+  }
+}
